@@ -6,7 +6,7 @@ import numpy as np
 import streamlit as st
 import mediapipe as mp
 from matplotlib import pyplot as plt
-t2s = pyttsx3.init()
+#t2s = pyttsx3.init()
 
 from tensorflow.keras.models import load_model
 model = load_model('action.h5')
@@ -82,13 +82,13 @@ with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=
                         if actions[np.argmax(res)] != sentence[-1]:
                             sentence.append(actions[np.argmax(res)])
                             new_word = actions[np.argmax(res)]
-                            t2s.say(new_word)
-                            t2s.runAndWait()
+                            #t2s.say(new_word)
+                            #t2s.runAndWait()
                     else:
                         sentence.append(actions[np.argmax(res)])
                         new_word = actions[np.argmax(res)]
-                        t2s.say(new_word)
-                        t2s.runAndWait()
+                        #t2s.say(new_word)
+                        #t2s.runAndWait()
 
             if len(sentence) > 5:
                 sentence = sentence[-5:]
