@@ -1,6 +1,5 @@
 tensorflow
 keras
-split-folders
 opencv-python-headless
 matplotlib
 streamlit
