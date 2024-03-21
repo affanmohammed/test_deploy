@@ -1,7 +1,0 @@
-tensorflow
-keras
-opencv-python-headless
-matplotlib
-streamlit
-numpy
-mediapipe
